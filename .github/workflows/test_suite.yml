@@ -1,0 +1,36 @@
+name: Test Suite
+
+on: [push]
+
+jobs:
+  run_tests:
+    strategy:
+      fail-fast: false
+      matrix:
+        # Set N number of parallel jobs you want to run tests on.
+        # Use higher number if you have slow tests to split them on more parallel jobs.
+        # Remember to update ci_node_index below to 0..N-1
+        ci_node_total: [2]
+        # set N-1 indexes for parallel jobs
+        # When you run 2 parallel jobs then first job will have index 0, the second job will have index 1 etc
+        ci_node_index: [0, 1]
+    steps:
+      - uses: actions/checkout@v2
+      - name: Set up Ruby 2.6
+        uses: ruby/setup-ruby@v1
+        with:
+          ruby-version: .ruby-version
+      - name: set up dotenv
+        env:
+          API_TOKEN: ${{ secrets.API_TOKEN }}
+        run: |
+          echo $API_TOKEN | base64 --decode > .env
+      - name: bundle install
+        run: |
+          gem install bundler --version 2.1.4
+          bundle install
+      - name: Run tests
+        env:
+          RAILS_ENV: test
+        run: |
+          bundle exec rake test
