@@ -26,6 +26,9 @@ Gem::Specification.new do |spec|
   spec.require_paths = ["lib"]
 
   spec.add_dependency "httparty", "~> 0.20"
+
+  spec.add_development_dependency "dotenv", "~> 2.7.6"
+  spec.add_development_dependency "minitest-vcr", "~> 1.4.0"
   spec.add_development_dependency "webmock", "~> 3.14.0"
 
   # Uncomment to register a new dependency of your gem

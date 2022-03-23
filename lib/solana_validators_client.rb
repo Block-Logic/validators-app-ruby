@@ -12,8 +12,9 @@ class SolanaValidatorsClient
   VALIDATORS_PATH = "https://validators.app/api/v1"
   AVAILABLE_NETWORKS = %w(mainnet testnet).freeze
 
-  def initialize(token)
+  def initialize(token, url = VALIDATORS_PATH)
     @token = token
+    @url = url
   end
 
   # EXAMPLE: get_validators(network: "mainnet")
@@ -34,7 +35,7 @@ class SolanaValidatorsClient
   end
 
   def prepare_path(path, network = nil)
-    [VALIDATORS_PATH, path.to_s.split("_")[1..-1].join("-"), network].join("/")
+    [@url, path.to_s.split("_")[1..-1].join("-"), network].join("/")
   end
 
   def validate_network(network = nil)
