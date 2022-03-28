@@ -34,11 +34,11 @@ class SolanaValidatorsClientTest < Minitest::Test
   def test_validate_network_returns_network_with_correct_data_provided
     network = SolanaValidatorsClient.new("token").validate_network(@network)
 
-    assert "testnet", network
+    assert_equal "testnet", network
   end
 
   def test_validate_network_raises_error_with_incorrect_data
-    assert_raises SolanaValidatorsClient::InvalidArgumentError do
+    assert_raises ArgumentError do
       SolanaValidatorsClient.new("token").validate_network(@network + "bad")
     end
   end

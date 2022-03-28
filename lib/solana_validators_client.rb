@@ -5,7 +5,6 @@ require_relative "solana_validators_client/version"
 
 class SolanaValidatorsClient
   class Error < StandardError; end
-  class InvalidArgumentError < StandardError; end
 
   include HTTParty
 
@@ -31,7 +30,10 @@ class SolanaValidatorsClient
       super
     end
 
-    response_or_error(response)
+    raise ArgumentError, "Request failed with #{response.code}: #{response.message}" \
+      unless response.code < 300
+
+    response
   end
 
   def prepare_path(path, network = nil, id = nil)
@@ -41,7 +43,7 @@ class SolanaValidatorsClient
   def validate_network(network = nil)
     return nil unless network
 
-    raise InvalidArgumentError, "Allowed networks are: #{AVAILABLE_NETWORKS.join(', ')}." \
+    raise ArgumentError, "Allowed networks are: #{AVAILABLE_NETWORKS.join(', ')}." \
       unless AVAILABLE_NETWORKS.include?(network)
 
     network
@@ -52,13 +54,5 @@ class SolanaValidatorsClient
       "Content-Type" => "application/json",
       "Token" => @token
     }
-  end
-
-  def response_or_error(response)
-    if response.code >= 300
-      raise ArgumentError, "Request failed with #{response.code}: #{response.message} for #{response.request.last_uri}"
-    else
-      response
-    end
   end
 end

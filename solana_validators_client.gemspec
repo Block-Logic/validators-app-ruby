@@ -5,7 +5,7 @@ require_relative "lib/solana_validators_client/version"
 Gem::Specification.new do |spec|
   spec.name          = "solana_validators_client"
   spec.version       = SolanaValidatorsClientVersion::VERSION
-  spec.authors       = ["maciejkocylapc"]
+  spec.authors       = ["BlockLogic team"]
   spec.email         = ["maciej.kocyla@polcode.net"]
 
   spec.summary       = "Ruby wrapper for validators.app API endpoints" 
