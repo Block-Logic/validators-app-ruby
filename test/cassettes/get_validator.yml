@@ -1,0 +1,65 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://stage.validators.app/api/v1/validators/mainnet/DDnAqxJVFo2GVTujibHt5cjevHMSE9bo8HJaydHoshdp
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Content-Type:
+      - application/json
+      Token:
+      - "<API_TOKEN>"
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Wed, 23 Mar 2022 15:06:44 GMT
+      Server:
+      - Apache/2.4.29 (Ubuntu)
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      Vary:
+      - Origin
+      Referrer-Policy:
+      - strict-origin-when-cross-origin
+      X-Permitted-Cross-Domain-Policies:
+      - none
+      X-Xss-Protection:
+      - 1; mode=block
+      X-Request-Id:
+      - 4820828b-7935-425b-a9f3-4520aac39d6d
+      X-Download-Options:
+      - noopen
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Runtime:
+      - '0.314740'
+      X-Content-Type-Options:
+      - nosniff
+      X-Powered-By:
+      - Phusion Passenger 6.0.7
+      Etag:
+      - W/"5ba642e318a0a49844c3fef1a380e50b"
+      Status:
+      - 200 OK
+      Transfer-Encoding:
+      - chunked
+      Content-Type:
+      - application/json; charset=utf-8
+    body:
+      encoding: UTF-8
+      string: '{"network":"mainnet","account":"DDnAqxJVFo2GVTujibHt5cjevHMSE9bo8HJaydHoshdp","name":"Block
+        Logic | BL","keybase_id":"brianlong","www_url":"https://www.blocklogic.net","details":"Experienced
+        validator located in Boulder, CO. Creator/Maintainer of www.validators.app","avatar_url":"https://s3.amazonaws.com/keybase_processed_uploads/3af995d21a8fe4cec4d6e83104f87205_360_360.jpg","created_at":"2021-03-06T18:16:08.539Z","updated_at":"2022-03-21T10:10:04.336Z","admin_warning":null,"active_stake":4130087119250509,"authorized_withdrawer_score":0,"commission":8,"data_center_concentration_score":0,"delinquent":false,"published_information_score":2,"root_distance_score":2,"security_report_score":0,"skipped_slot_score":1,"software_version":"1.8.14","software_version_score":0,"stake_concentration_score":-2,"total_score":5,"vote_distance_score":2,"data_center_key":"20326-NL-Amsterdam","autonomous_system_number":20326,"latitude":"52.3716","longitude":"4.8883","data_center_host":null,"vote_account":"9GJmEHGom9eWo4np4L5vC6b6ri1Df2xN8KFoWixvD1Bs","epoch_credits":154084,"epoch":292,"skipped_slots":16,"skipped_slot_percent":"0.008","ping_time":null,"url":"https://stage.validators.app/api/v1/validators/mainnet/DDnAqxJVFo2GVTujibHt5cjevHMSE9bo8HJaydHoshdp"}'
+  recorded_at: Wed, 23 Mar 2022 15:06:45 GMT
+recorded_with: VCR 6.1.0

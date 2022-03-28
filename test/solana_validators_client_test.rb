@@ -15,7 +15,7 @@ class SolanaValidatorsClientTest < Minitest::Test
     path = "get_ping"
     prepared_path = SolanaValidatorsClient.new("token").prepare_path(path)
 
-    assert_equal "https://validators.app/api/v1/ping/", prepared_path
+    assert_equal "https://validators.app/api/v1/ping", prepared_path
   end
 
   def test_prepare_path_returns_correct_path_with_network
@@ -46,7 +46,7 @@ class SolanaValidatorsClientTest < Minitest::Test
   def test_custom_method_with_get_returns_correct_json
     expected_response = { "answer": "pong" }
     client = SolanaValidatorsClient.new("token")
-    stub_request(:get, "https://validators.app/api/v1/ping/")
+    stub_request(:get, "https://validators.app/api/v1/ping")
       .with(
         headers: {
           "Accept" => "*/*",

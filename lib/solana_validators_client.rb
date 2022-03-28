@@ -20,13 +20,13 @@ class SolanaValidatorsClient
   # EXAMPLE: get_validators(network: "mainnet")
   def method_missing(method, **args)
     network = validate_network(args[:network])
-    path = prepare_path(method, network)
-    params = args.reject{ |a| a == :network }
+    path = prepare_path(method, network, args[:id])
+    params = args.reject{ |a| [:network, :id].include?(a) }
 
     if method.to_s.start_with?("get_")
       response = self.class.get(path, query: params, headers: headers)
     elsif method.to_s.start_with?("post_")
-      response = self.class.post(path, query: params, headers: headers)
+      response = self.class.post(path, body: params.to_json, headers: headers)
     else
       super
     end
@@ -34,8 +34,8 @@ class SolanaValidatorsClient
     response_or_error(response)
   end
 
-  def prepare_path(path, network = nil)
-    [@url, path.to_s.split("_")[1..-1].join("-"), network].join("/")
+  def prepare_path(path, network = nil, id = nil)
+    [@url, path.to_s.split("_")[1..-1].join("-"), network, id].compact.join("/")
   end
 
   def validate_network(network = nil)
@@ -56,7 +56,7 @@ class SolanaValidatorsClient
 
   def response_or_error(response)
     if response.code >= 300
-      raise ArgumentError, "Request failed with #{response.code}: #{response.message}"
+      raise ArgumentError, "Request failed with #{response.code}: #{response.message} for #{response.request.last_uri}"
     else
       response
     end

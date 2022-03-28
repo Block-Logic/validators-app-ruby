@@ -1,0 +1,63 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://stage.validators.app/api/v1/commission-changes/testnet
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Content-Type:
+      - application/json
+      Token:
+      - "<API_TOKEN>"
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Fri, 25 Mar 2022 10:59:38 GMT
+      Server:
+      - Apache/2.4.29 (Ubuntu)
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      Vary:
+      - Origin
+      Referrer-Policy:
+      - strict-origin-when-cross-origin
+      X-Permitted-Cross-Domain-Policies:
+      - none
+      X-Xss-Protection:
+      - 1; mode=block
+      X-Request-Id:
+      - 431088f6-9d1f-428a-9b2a-3bbf7120f129
+      X-Download-Options:
+      - noopen
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Runtime:
+      - '0.180207'
+      X-Content-Type-Options:
+      - nosniff
+      X-Powered-By:
+      - Phusion Passenger 6.0.7
+      Etag:
+      - W/"51176a78265c7b4231cc0c0383b7c124"
+      Status:
+      - 200 OK
+      Transfer-Encoding:
+      - chunked
+      Content-Type:
+      - application/json; charset=utf-8
+    body:
+      encoding: UTF-8
+      string: '{"commission_histories":[{"created_at":"2022-03-25T09:45:03.640Z","commission_before":null,"commission_after":100.0,"epoch":302,"network":"testnet","id":269280,"epoch_completion":7.19,"batch_uuid":"05a7dd1a-21ab-4526-b8d4-7ab4a1b31483","account":"2m6u5GuThX4mjoJT5FYEokHpkvZPo53XXJvtU3JpWxAx","name":null},{"created_at":"2022-03-25T09:45:03.629Z","commission_before":null,"commission_after":100.0,"epoch":302,"network":"testnet","id":269279,"epoch_completion":7.19,"batch_uuid":"05a7dd1a-21ab-4526-b8d4-7ab4a1b31483","account":"35JSchpXQVtZH6GLbXgoRoAqZqEhDuRPHeKqspYGXRPV","name":null},{"created_at":"2022-03-25T08:20:39.045Z","commission_before":null,"commission_after":100.0,"epoch":302,"network":"testnet","id":269277,"epoch_completion":5.07,"batch_uuid":"49cfb40a-b2c8-4c7a-8e65-20897ba360e4","account":"9t3x14JJPXnsybMFLopPaAxwBrbTY2MwUwcN8vfW3qsU","name":"Ikari"},{"created_at":"2022-03-25T08:20:39.028Z","commission_before":null,"commission_after":100.0,"epoch":302,"network":"testnet","id":269276,"epoch_completion":5.07,"batch_uuid":"49cfb40a-b2c8-4c7a-8e65-20897ba360e4","account":"hnoGBBvXhNhZPqinhfF3TYMgeKY8cqgGRxdQQMaUKsV","name":null},{"created_at":"2022-03-25T00:47:09.009Z","commission_before":null,"commission_after":100.0,"epoch":301,"network":"testnet","id":269271,"epoch_completion":93.17,"batch_uuid":"8377d890-f3a5-4fa8-b660-fb21ddda9065","account":"A6jN1SP7PjWMCU13MtLYfQApYzxVcFjnCbPmPeXwT4JR","name":null},{"created_at":"2022-03-24T23:18:49.079Z","commission_before":null,"commission_after":100.0,"epoch":301,"network":"testnet","id":269269,"epoch_completion":90.93,"batch_uuid":"0bd83612-2b24-4494-920a-41779352b47c","account":"3CpzeaQT32VWJejyBgXooNRmi75n8QRNAD7SHwgv6Hrg","name":null},{"created_at":"2022-03-24T22:40:02.568Z","commission_before":null,"commission_after":100.0,"epoch":301,"network":"testnet","id":269268,"epoch_completion":89.82,"batch_uuid":"a7ad9f3e-dcac-4805-9579-79f05b879547","account":"3J1AUKMQ5ZavobdzJ8yzRBcUpN9XzV3VfR5d1iVev3i9","name":null},{"created_at":"2022-03-24T21:49:00.082Z","commission_before":null,"commission_after":100.0,"epoch":301,"network":"testnet","id":269267,"epoch_completion":88.56,"batch_uuid":"236f39d0-94c8-479d-8188-c1ab18cded71","account":"HfkB17jhe4JnzUjrNHYjXtp76sXkUt6TR5mxoU8aWFDW","name":null},{"created_at":"2022-03-24T16:20:06.567Z","commission_before":null,"commission_after":100.0,"epoch":301,"network":"testnet","id":269265,"epoch_completion":80.05,"batch_uuid":"22df145a-aa99-4d88-b7d1-7c17006b81ad","account":"GKsy1HjivoXp6v9CZBM1gG7jtrCAZphEBQkXDpiwirLg","name":null},{"created_at":"2022-03-24T08:18:46.957Z","commission_before":null,"commission_after":100.0,"epoch":301,"network":"testnet","id":269261,"epoch_completion":67.72,"batch_uuid":"2f9b7c40-b46b-4845-b7fe-1709397bb842","account":"DgAseXdRqbcXyKoVzjkNvbu8HfGtTMKC2FzSb8kKqduX","name":null},{"created_at":"2022-03-23T23:47:10.799Z","commission_before":null,"commission_after":100.0,"epoch":301,"network":"testnet","id":269260,"epoch_completion":54.54,"batch_uuid":"3d241715-c8d6-4cca-8bed-c0acc1ae1801","account":"5wFcorGh3iu7E9ydJrpJ5ptf4mxm6NVGqn21RrrnweHT","name":null},{"created_at":"2022-03-23T20:50:13.792Z","commission_before":null,"commission_after":100.0,"epoch":301,"network":"testnet","id":269258,"epoch_completion":50.02,"batch_uuid":"d3655557-b1f0-4c7e-8bee-650733ca9c42","account":"AcQ7j1FQmk4JHqWC1CkXo8yrRjvmwFx1etursUYiNUyg","name":null},{"created_at":"2022-03-22T10:35:36.930Z","commission_before":null,"commission_after":100.0,"epoch":300,"network":"testnet","id":269251,"epoch_completion":99.61,"batch_uuid":"06f9e10f-1a9f-4693-87a8-b4edc4081638","account":"2quoRkD5pTmYsrR3nrtWDiWpftXUSsRjBjkikHbUZZBu","name":null},{"created_at":"2022-03-22T06:55:30.525Z","commission_before":null,"commission_after":100.0,"epoch":300,"network":"testnet","id":269250,"epoch_completion":94.13,"batch_uuid":"ee467238-570e-4b92-9185-6d52f5d03e6d","account":"GpEoiQ148pi8BhG81qcN8BXP37Bptw2XVxnmses7aPg8","name":null},{"created_at":"2022-03-21T21:34:14.550Z","commission_before":null,"commission_after":100.0,"epoch":300,"network":"testnet","id":269248,"epoch_completion":79.45,"batch_uuid":"4307492a-1eff-476e-b777-0a28cb92f570","account":"5NGDyBtipSQSpzUp8xR1Z6mPuWjWAgiewEXb3UqyCGAX","name":null},{"created_at":"2022-03-21T21:16:59.147Z","commission_before":null,"commission_after":100.0,"epoch":300,"network":"testnet","id":269247,"epoch_completion":78.98,"batch_uuid":"05db093d-1e9a-4a09-9868-fd65a0928246","account":"Adk7uBYMjHAvg5jRCFPX11NSwtoFJU6tnWRNqqEc9hJ3","name":null},{"created_at":"2022-03-21T20:58:23.698Z","commission_before":null,"commission_after":100.0,"epoch":300,"network":"testnet","id":269246,"epoch_completion":78.48,"batch_uuid":"bd5f535d-6a9d-4e50-aa5e-073462200ef4","account":"5WdxyXnJfLhJMHGQEvPuyTErgPjxF3UYi9GweVnErxWa","name":null},{"created_at":"2022-03-21T20:58:23.687Z","commission_before":null,"commission_after":100.0,"epoch":300,"network":"testnet","id":269245,"epoch_completion":78.48,"batch_uuid":"bd5f535d-6a9d-4e50-aa5e-073462200ef4","account":"AGtpJvgYgv9bU48tVVXkJvhWtJgzaPmqw7GAT4hRogv6","name":null},{"created_at":"2022-03-21T20:58:23.674Z","commission_before":null,"commission_after":100.0,"epoch":300,"network":"testnet","id":269244,"epoch_completion":78.48,"batch_uuid":"bd5f535d-6a9d-4e50-aa5e-073462200ef4","account":"92rvaeY6RYaFPZPtEUnXiV6wqy74bKK51A9PE3YtuqPW","name":null},{"created_at":"2022-03-21T20:37:20.202Z","commission_before":null,"commission_after":100.0,"epoch":300,"network":"testnet","id":269243,"epoch_completion":77.98,"batch_uuid":"868b9f49-74ba-42bd-a48e-e910fda9a0de","account":"12YwQsSRxhd88SmSyTpx77zcp4jfRkTu2vPzpvLrusAi","name":null},{"created_at":"2022-03-21T20:37:20.188Z","commission_before":null,"commission_after":100.0,"epoch":300,"network":"testnet","id":269242,"epoch_completion":77.98,"batch_uuid":"868b9f49-74ba-42bd-a48e-e910fda9a0de","account":"5fPxg7kEtebFi8ZKvUT7TYwE2WYN6EX5aifeJN4omAKP","name":null},{"created_at":"2022-03-21T17:59:16.962Z","commission_before":100.0,"commission_after":50.0,"epoch":300,"network":"testnet","id":269240,"epoch_completion":73.8,"batch_uuid":"2ee92ded-3a52-424e-ae65-ca92d329c87d","account":"cryo2bJBh15Lgo3VzioqiAkcxoewR6GLE9pArFFeUJ2","name":null},{"created_at":"2022-03-21T17:39:42.486Z","commission_before":null,"commission_after":100.0,"epoch":300,"network":"testnet","id":269239,"epoch_completion":73.2,"batch_uuid":"52d3a187-573e-4ec5-9be2-f1852f60cd14","account":"cryo2bJBh15Lgo3VzioqiAkcxoewR6GLE9pArFFeUJ2","name":null},{"created_at":"2022-03-21T16:38:23.004Z","commission_before":100.0,"commission_after":10.0,"epoch":300,"network":"testnet","id":269238,"epoch_completion":71.69,"batch_uuid":"9f28a9b9-6ef2-47ab-88c3-4205ad979aa6","account":"9P5sFULhNktpQxEST2Wiw6zBH4aJrANCjui8k5FhwcjH","name":"O''Solemio"},{"created_at":"2022-03-21T10:26:04.214Z","commission_before":null,"commission_after":100.0,"epoch":300,"network":"testnet","id":269235,"epoch_completion":62.21,"batch_uuid":"e767ba2c-3ad5-4213-8fe0-9adc8ecf75de","account":"Ce7YqRKj3HL5CHnmFnm3m3TrgvjveztdUdGnzg1xCHMC","name":null}],"total_count":184}'
+  recorded_at: Fri, 25 Mar 2022 10:59:38 GMT
+recorded_with: VCR 6.1.0

@@ -1,0 +1,68 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://stage.validators.app/api/v1/validators/testnet?limit=5&order=name&page=2
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Content-Type:
+      - application/json
+      Token:
+      - "<API_TOKEN>"
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Wed, 23 Mar 2022 14:00:46 GMT
+      Server:
+      - Apache/2.4.29 (Ubuntu)
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      Vary:
+      - Origin
+      Referrer-Policy:
+      - strict-origin-when-cross-origin
+      X-Permitted-Cross-Domain-Policies:
+      - none
+      X-Xss-Protection:
+      - 1; mode=block
+      X-Request-Id:
+      - 90060784-e005-4aeb-87cb-c8b0359836ef
+      X-Download-Options:
+      - noopen
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Runtime:
+      - '0.736265'
+      X-Content-Type-Options:
+      - nosniff
+      X-Powered-By:
+      - Phusion Passenger 6.0.7
+      Etag:
+      - W/"d129043790cfebaf6ba19f6e54f1a954"
+      Status:
+      - 200 OK
+      Transfer-Encoding:
+      - chunked
+      Content-Type:
+      - application/json; charset=utf-8
+    body:
+      encoding: UTF-8
+      string: '[{"network":"testnet","account":"ATtMQ3Aphrc9X2SeTJD9JWbcDJfn5aJs4NHWSknxfNb7","name":null,"keybase_id":null,"www_url":null,"details":null,"avatar_url":null,"created_at":"2021-04-16
+        14:03:01 UTC","updated_at":"2022-03-21 01:50:33 UTC","admin_warning":null,"active_stake":24622872585639,"authorized_withdrawer_score":-2,"commission":100,"data_center_concentration_score":null,"delinquent":true,"published_information_score":0,"root_distance_score":2,"security_report_score":0,"skipped_slot_score":0,"software_version":"1.9.6","software_version_score":0,"stake_concentration_score":0,"total_score":2,"vote_distance_score":2,"data_center_key":"201814-PL-Europe/Warsaw","autonomous_system_number":201814,"latitude":"52.2394","longitude":"21.0362","data_center_host":null,"vote_account":"9m5uCQRmoU5F4nSpDxTnh4qpjDfaH5mSypfn1pqbLPbV","epoch_credits":0,"epoch":301,"skipped_slots":16,"skipped_slot_percent":"1.0","ping_time":null,"url":"https://stage.validators.app/api/v1/validators/testnet/ATtMQ3Aphrc9X2SeTJD9JWbcDJfn5aJs4NHWSknxfNb7"},{"network":"testnet","account":"AtUD8QwodrRPdHXhEH8ZUkXkSZwe6eVaQbsfJYCarcLs","name":null,"keybase_id":null,"www_url":null,"details":null,"avatar_url":null,"created_at":"2021-05-14
+        14:39:10 UTC","updated_at":"2022-03-21 01:50:36 UTC","admin_warning":null,"active_stake":1976888320,"authorized_withdrawer_score":-2,"commission":100,"data_center_concentration_score":null,"delinquent":true,"published_information_score":0,"root_distance_score":0,"security_report_score":0,"skipped_slot_score":0,"software_version":"1.8.5","software_version_score":0,"stake_concentration_score":0,"total_score":-2,"vote_distance_score":0,"data_center_key":"21409-FR-Europe/Paris","autonomous_system_number":21409,"latitude":"48.8582","longitude":"2.3387","data_center_host":null,"vote_account":"q5NT4cBQKexfrFJbyMp27HstCV9BmE2eFtTBSfUwbAL","epoch_credits":0,"epoch":301,"url":"https://stage.validators.app/api/v1/validators/testnet/AtUD8QwodrRPdHXhEH8ZUkXkSZwe6eVaQbsfJYCarcLs"},{"network":"testnet","account":"AtUPHuH4zSEQBELKKBQim65UEoKSkUca7BzKHAkdVf4Y","name":null,"keybase_id":null,"www_url":null,"details":null,"avatar_url":null,"created_at":"2021-04-10
+        15:11:23 UTC","updated_at":"2022-03-21 01:50:29 UTC","admin_warning":null,"active_stake":1988302720,"authorized_withdrawer_score":-2,"commission":100,"data_center_concentration_score":null,"delinquent":true,"published_information_score":0,"root_distance_score":0,"security_report_score":0,"skipped_slot_score":0,"software_version":"1.6.9","software_version_score":0,"stake_concentration_score":0,"total_score":-2,"vote_distance_score":0,"data_center_key":"8560-ES-Europe/Madrid","autonomous_system_number":8560,"latitude":"40.4172","longitude":"-3.684","data_center_host":null,"vote_account":"C65DdohzacqG75mp3gY1C4wyv4HL2MnbxUtiGhBBubdu","epoch_credits":0,"epoch":301,"url":"https://stage.validators.app/api/v1/validators/testnet/AtUPHuH4zSEQBELKKBQim65UEoKSkUca7BzKHAkdVf4Y"},{"network":"testnet","account":"ATuZhiCdjCuKChbeVd6Yvq9mbGagDNY4WQ6aLeuofxS9","name":null,"keybase_id":null,"www_url":null,"details":null,"avatar_url":null,"created_at":"2022-02-28
+        23:29:48 UTC","updated_at":"2022-03-21 10:11:19 UTC","admin_warning":null,"active_stake":67468934158750,"authorized_withdrawer_score":0,"commission":100,"data_center_concentration_score":null,"delinquent":false,"published_information_score":0,"root_distance_score":1,"security_report_score":0,"skipped_slot_score":1,"software_version":"1.10.3","software_version_score":2,"stake_concentration_score":-2,"total_score":3,"vote_distance_score":1,"data_center_key":"16276-PL-Warsaw","autonomous_system_number":16276,"latitude":"48.8582","longitude":"2.3387","data_center_host":"vl1067.waw-d1-a75.pl.eu","vote_account":"HGQ7bYtw97FmnCBBJ1q7VjnB5hmXLd6e8EMm5J7392RW","epoch_credits":111457,"epoch":301,"skipped_slots":5,"skipped_slot_percent":"0.0735","ping_time":null,"url":"https://stage.validators.app/api/v1/validators/testnet/ATuZhiCdjCuKChbeVd6Yvq9mbGagDNY4WQ6aLeuofxS9"},{"network":"testnet","account":"AUA4sQRvzwWiL2DTEk6aCaAqZpKJ2j7RGMsJthP5aa6y","name":null,"keybase_id":null,"www_url":null,"details":null,"avatar_url":null,"created_at":"2021-05-18
+        07:07:17 UTC","updated_at":"2022-03-21 10:10:35 UTC","admin_warning":null,"active_stake":74452801915550,"authorized_withdrawer_score":-2,"commission":100,"data_center_concentration_score":null,"delinquent":false,"published_information_score":0,"root_distance_score":2,"security_report_score":0,"skipped_slot_score":1,"software_version":"1.10.3","software_version_score":2,"stake_concentration_score":-2,"total_score":3,"vote_distance_score":2,"data_center_key":"16276-PL-Warsaw","autonomous_system_number":16276,"latitude":"48.8582","longitude":"2.3387","data_center_host":"vl1067.waw-d1-a75.pl.eu","vote_account":"Ch7FdQMN6eeuQfv874PizQufxL392DecDd91F4EqVE9h","epoch_credits":111338,"epoch":301,"skipped_slots":16,"skipped_slot_percent":"0.0976","ping_time":null,"url":"https://stage.validators.app/api/v1/validators/testnet/AUA4sQRvzwWiL2DTEk6aCaAqZpKJ2j7RGMsJthP5aa6y"}]'
+  recorded_at: Wed, 23 Mar 2022 14:00:47 GMT
+recorded_with: VCR 6.1.0

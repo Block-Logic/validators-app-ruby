@@ -1,0 +1,63 @@
+---
+http_interactions:
+- request:
+    method: post
+    uri: https://stage.validators.app/api/v1/ping-thing-batch/testnet
+    body:
+      encoding: UTF-8
+      string: '{"transactions":[{"application":"cli","commitment_level":"finished","signature":"tested_signature","reported_at":"2022-03-28T10:30:39+02:00","success":true,"time":123,"transaction_type":"transfer"}]}'
+    headers:
+      Content-Type:
+      - application/json
+      Token:
+      - "<API_TOKEN>"
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 201
+      message: Created
+    headers:
+      Date:
+      - Mon, 28 Mar 2022 08:30:39 GMT
+      Server:
+      - Apache/2.4.29 (Ubuntu)
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      Vary:
+      - Origin
+      Referrer-Policy:
+      - strict-origin-when-cross-origin
+      X-Permitted-Cross-Domain-Policies:
+      - none
+      X-Xss-Protection:
+      - 1; mode=block
+      X-Request-Id:
+      - 3e4a218f-fca3-4678-bd2e-1a319f94698b
+      X-Download-Options:
+      - noopen
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Runtime:
+      - '0.051358'
+      X-Content-Type-Options:
+      - nosniff
+      X-Powered-By:
+      - Phusion Passenger 6.0.7
+      Etag:
+      - W/"5c15461069e69109955c72671ffc465d"
+      Status:
+      - 201 Created
+      Transfer-Encoding:
+      - chunked
+      Content-Type:
+      - application/json; charset=utf-8
+    body:
+      encoding: UTF-8
+      string: '{"status":"created"}'
+  recorded_at: Mon, 28 Mar 2022 08:30:39 GMT
+recorded_with: VCR 6.1.0

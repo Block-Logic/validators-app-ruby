@@ -1,0 +1,63 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://stage.validators.app/api/v1/epochs/testnet
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Content-Type:
+      - application/json
+      Token:
+      - "<API_TOKEN>"
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Fri, 25 Mar 2022 10:57:33 GMT
+      Server:
+      - Apache/2.4.29 (Ubuntu)
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      Vary:
+      - Origin
+      Referrer-Policy:
+      - strict-origin-when-cross-origin
+      X-Permitted-Cross-Domain-Policies:
+      - none
+      X-Xss-Protection:
+      - 1; mode=block
+      X-Request-Id:
+      - b083e827-404e-45cf-b116-58eec3b80331
+      X-Download-Options:
+      - noopen
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Runtime:
+      - '0.029411'
+      X-Content-Type-Options:
+      - nosniff
+      X-Powered-By:
+      - Phusion Passenger 6.0.7
+      Etag:
+      - W/"be5b873ec5ca5094add4c7ab4e0cb44f"
+      Status:
+      - 200 OK
+      Transfer-Encoding:
+      - chunked
+      Content-Type:
+      - application/json; charset=utf-8
+    body:
+      encoding: UTF-8
+      string: '{"epochs":[{"epoch":302,"starting_slot":124940256,"slots_in_epoch":432000,"network":"testnet","created_at":"2022-03-25T05:00:28.000Z"},{"epoch":301,"starting_slot":124508260,"slots_in_epoch":432000,"network":"testnet","created_at":"2022-03-22T10:41:04.000Z"},{"epoch":300,"starting_slot":124076256,"slots_in_epoch":432000,"network":"testnet","created_at":"2022-03-19T19:11:46.000Z"},{"epoch":299,"starting_slot":123644260,"slots_in_epoch":432000,"network":"testnet","created_at":"2022-03-17T05:32:35.000Z"},{"epoch":298,"starting_slot":123212256,"slots_in_epoch":432000,"network":"testnet","created_at":"2022-03-14T17:12:01.000Z"},{"epoch":297,"starting_slot":122780256,"slots_in_epoch":432000,"network":"testnet","created_at":"2022-03-12T04:43:10.000Z"},{"epoch":296,"starting_slot":122348260,"slots_in_epoch":432000,"network":"testnet","created_at":"2022-03-09T16:46:29.000Z"},{"epoch":295,"starting_slot":121916256,"slots_in_epoch":432000,"network":"testnet","created_at":"2022-03-07T05:00:13.000Z"},{"epoch":294,"starting_slot":121484256,"slots_in_epoch":432000,"network":"testnet","created_at":"2022-03-04T18:00:09.000Z"},{"epoch":293,"starting_slot":121052260,"slots_in_epoch":432000,"network":"testnet","created_at":"2022-03-02T05:38:07.000Z"},{"epoch":292,"starting_slot":120620260,"slots_in_epoch":432000,"network":"testnet","created_at":"2022-02-27T16:32:56.000Z"},{"epoch":291,"starting_slot":120188256,"slots_in_epoch":432000,"network":"testnet","created_at":"2022-02-25T02:23:52.000Z"},{"epoch":288,"starting_slot":118892270,"slots_in_epoch":432000,"network":"testnet","created_at":"2022-02-17T21:11:46.000Z"},{"epoch":287,"starting_slot":118460256,"slots_in_epoch":432000,"network":"testnet","created_at":"2022-02-15T06:12:05.000Z"},{"epoch":286,"starting_slot":118028256,"slots_in_epoch":432000,"network":"testnet","created_at":"2022-02-12T18:47:23.000Z"},{"epoch":285,"starting_slot":117596256,"slots_in_epoch":432000,"network":"testnet","created_at":"2022-02-10T05:41:56.000Z"},{"epoch":284,"starting_slot":117164256,"slots_in_epoch":432000,"network":"testnet","created_at":"2022-02-07T18:29:54.000Z"},{"epoch":283,"starting_slot":116732256,"slots_in_epoch":432000,"network":"testnet","created_at":"2022-02-05T07:05:08.000Z"},{"epoch":282,"starting_slot":116300260,"slots_in_epoch":432000,"network":"testnet","created_at":"2022-02-02T20:20:20.000Z"},{"epoch":281,"starting_slot":115868256,"slots_in_epoch":432000,"network":"testnet","created_at":"2022-01-31T10:37:05.000Z"},{"epoch":280,"starting_slot":115436256,"slots_in_epoch":432000,"network":"testnet","created_at":"2022-01-28T23:45:05.000Z"},{"epoch":279,"starting_slot":115004256,"slots_in_epoch":432000,"network":"testnet","created_at":"2022-01-26T10:14:10.000Z"},{"epoch":278,"starting_slot":114572260,"slots_in_epoch":432000,"network":"testnet","created_at":"2022-01-23T23:36:23.000Z"},{"epoch":277,"starting_slot":114140256,"slots_in_epoch":432000,"network":"testnet","created_at":"2022-01-21T11:27:39.000Z"},{"epoch":276,"starting_slot":113708264,"slots_in_epoch":432000,"network":"testnet","created_at":"2022-01-18T23:06:27.000Z"}],"epochs_count":104}'
+  recorded_at: Fri, 25 Mar 2022 10:57:33 GMT
+recorded_with: VCR 6.1.0
