@@ -8,23 +8,22 @@ class EndpointsTest < Minitest::Test
     @testnet_network = "testnet"
     @mainnet_network = "mainnet"
     @account = "DDnAqxJVFo2GVTujibHt5cjevHMSE9bo8HJaydHoshdp" # BlockLogic
+    @client = SolanaValidatorsClient.new(ENV["API_TOKEN"], @stage_url)
   end
 
   def test_get_ping_returns_correct_json
-    expected_response = { "answer": "pong" }
-    client = SolanaValidatorsClient.new(ENV["API_TOKEN"], @stage_url)
+    expected_response = { "answer": "pong" }.to_json
+    
 
     VCR.use_cassette "get_ping" do
-      resp = client.get_ping
-      assert_equal expected_response, JSON.parse(resp.body).transform_keys(&:to_sym)
+      resp = @client.get_ping
+      assert_equal expected_response, resp.body
     end
   end
 
   def test_get_validators_returns_correct_json
-    client = SolanaValidatorsClient.new(ENV["API_TOKEN"], @stage_url)
-
     VCR.use_cassette "get_validators" do
-      resp = client.get_validators(network: @testnet_network)
+      resp = @client.get_validators(network: @testnet_network)
       response = JSON.parse(resp.body)
 
       assert_equal 200, resp.code
@@ -33,10 +32,8 @@ class EndpointsTest < Minitest::Test
   end
 
   def test_get_validators_with_optional_params_returns_correct_json
-    client = SolanaValidatorsClient.new(ENV["API_TOKEN"], @stage_url)
-
     VCR.use_cassette "get_validators_w_params" do
-      resp = client.get_validators(network: @testnet_network, limit: 5, page: 2, order: "name")
+      resp = @client.get_validators(network: @testnet_network, limit: 5, page: 2, order: "name")
       response = JSON.parse(resp.body)
 
       assert_equal 200, resp.code
@@ -45,10 +42,8 @@ class EndpointsTest < Minitest::Test
   end
 
   def test_get_validator_returns_correct_json
-    client = SolanaValidatorsClient.new(ENV["API_TOKEN"], @stage_url)
-
     VCR.use_cassette "get_validator" do
-      resp = client.get_validators(network: @mainnet_network, id: @account)
+      resp = @client.get_validators(network: @mainnet_network, id: @account)
       response = JSON.parse(resp.body)
 
       assert_equal 200, resp.code
@@ -57,10 +52,10 @@ class EndpointsTest < Minitest::Test
   end
 
   def test_get_validator_block_history_returns_correct_json
-    client = SolanaValidatorsClient.new(ENV["API_TOKEN"], @stage_url)
+    
 
     VCR.use_cassette "get_validator_block_history" do
-      resp = client.get_validator_block_history(network: @mainnet_network, id: @account)
+      resp = @client.get_validator_block_history(network: @mainnet_network, id: @account)
       response = JSON.parse(resp.body)
 
       assert_equal 200, resp.code
@@ -70,10 +65,8 @@ class EndpointsTest < Minitest::Test
   end
 
   def test_get_validator_block_history_with_limit_returns_correct_json
-    client = SolanaValidatorsClient.new(ENV["API_TOKEN"], @stage_url)
-
     VCR.use_cassette "get_validator_block_history_with_limit" do
-      resp = client.get_validator_block_history(
+      resp = @client.get_validator_block_history(
         network: @mainnet_network,
         id: @account,
         limit: 100
@@ -86,10 +79,8 @@ class EndpointsTest < Minitest::Test
   end
 
   def test_get_epochs_returns_correct_json
-    client = SolanaValidatorsClient.new(ENV["API_TOKEN"], @stage_url)
-
     VCR.use_cassette "get_epochs" do
-      resp = client.get_epochs(network: @testnet_network)
+      resp = @client.get_epochs(network: @testnet_network)
       response = JSON.parse(resp.body)
 
       assert_equal 200, resp.code
@@ -98,10 +89,8 @@ class EndpointsTest < Minitest::Test
   end
 
   def test_get_commission_changes_returns_correct_json
-    client = SolanaValidatorsClient.new(ENV["API_TOKEN"], @stage_url)
-
     VCR.use_cassette "get_commission_changes" do
-      resp = client.get_commission_changes(network: @testnet_network)
+      resp = @client.get_commission_changes(network: @testnet_network)
       response = JSON.parse(resp.body)
 
       assert_equal 200, resp.code
@@ -112,10 +101,8 @@ class EndpointsTest < Minitest::Test
   end
 
   def test_get_commission_changes_with_params_returns_correct_json
-    client = SolanaValidatorsClient.new(ENV["API_TOKEN"], @stage_url)
-
     VCR.use_cassette "get_commission_changes_with_params" do
-      resp = client.get_commission_changes(
+      resp = @client.get_commission_changes(
         network: @testnet_network,
         per: 5,
         page: 2
@@ -128,26 +115,22 @@ class EndpointsTest < Minitest::Test
   end
 
   def test_get_stake_pools_returns_correct_json
-    client = SolanaValidatorsClient.new(ENV["API_TOKEN"], @stage_url)
-
     VCR.use_cassette "get_stake_pools" do
-      resp = client.get_commission_changes(
+      resp = @client.get_stake_pools(
         network: @testnet_network,
         per: 5,
-        page: 2
+        page: 1
       )
       response = JSON.parse(resp.body)
 
       assert_equal 200, resp.code
-      assert_equal 5, response["commission_histories"].count
+      assert_equal 1, response["stake_pools"].count
     end
   end
 
   def test_get_stake_accounts_returns_correct_json
-    client = SolanaValidatorsClient.new(ENV["API_TOKEN"], @stage_url)
-
     VCR.use_cassette "get_stake_accounts" do
-      resp = client.get_stake_accounts(
+      resp = @client.get_stake_accounts(
         network: @testnet_network,
         per: 5,
         page: 2
@@ -160,11 +143,10 @@ class EndpointsTest < Minitest::Test
   end
 
   def test_post_ping_thing_returns_correct_json
-    client = SolanaValidatorsClient.new(ENV["API_TOKEN"], @stage_url)
-    expected_response = {"status": "created"}
+    expected_response = {"status": "created"}.to_json
 
     VCR.use_cassette "post_ping_thing" do
-      resp = client.post_ping_thing(
+      resp = @client.post_ping_thing(
         network: @testnet_network,
         application: "cli",
         commitment_level: "finished",
@@ -177,16 +159,15 @@ class EndpointsTest < Minitest::Test
       response = JSON.parse(resp.body)
 
       assert_equal 201, resp.code
-      assert_equal expected_response, response.transform_keys(&:to_sym)
+      assert_equal expected_response, resp.body
     end
   end
 
   def test_post_ping_thing_batch_returns_correct_json
-    client = SolanaValidatorsClient.new(ENV["API_TOKEN"], @stage_url)
-    expected_response = {"status": "created"}
+    expected_response = {"status": "created"}.to_json
 
     VCR.use_cassette "post_ping_thing_batch" do
-      resp = client.post_ping_thing_batch(
+      resp = @client.post_ping_thing_batch(
         network: @testnet_network,
         transactions: [
           {
@@ -203,15 +184,13 @@ class EndpointsTest < Minitest::Test
       response = JSON.parse(resp.body)
 
       assert_equal 201, resp.code
-      assert_equal expected_response, response.transform_keys(&:to_sym)
+      assert_equal expected_response, resp.body
     end
   end
 
   def test_get_ping_thing_returns_correct_json
-    client = SolanaValidatorsClient.new(ENV["API_TOKEN"], @stage_url)
-
     VCR.use_cassette "get_ping_thing" do
-      resp = client.get_ping_thing(
+      resp = @client.get_ping_thing(
         network: @testnet_network,
         limit: 5
       )
@@ -223,10 +202,9 @@ class EndpointsTest < Minitest::Test
   end
 
   def test_get_sol_prices_returns_correct_json
-    client = SolanaValidatorsClient.new(ENV["API_TOKEN"], @stage_url)
     exchange = "coin_gecko"
     VCR.use_cassette "get_sol_prices" do
-      resp = client.get_sol_prices(
+      resp = @client.get_sol_prices(
         exchange: exchange
       )
       response = JSON.parse(resp.body)

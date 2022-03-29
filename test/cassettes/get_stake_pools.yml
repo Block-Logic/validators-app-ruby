@@ -2,7 +2,7 @@
 http_interactions:
 - request:
     method: get
-    uri: https://stage.validators.app/api/v1/commission-changes/testnet?page=2&per=5
+    uri: https://stage.validators.app/api/v1/stake-pools/testnet?page=1&per=5
     body:
       encoding: US-ASCII
       string: ''
@@ -23,7 +23,7 @@ http_interactions:
       message: OK
     headers:
       Date:
-      - Mon, 28 Mar 2022 08:01:03 GMT
+      - Tue, 29 Mar 2022 07:16:42 GMT
       Server:
       - Apache/2.4.29 (Ubuntu)
       Cache-Control:
@@ -37,19 +37,19 @@ http_interactions:
       X-Xss-Protection:
       - 1; mode=block
       X-Request-Id:
-      - 9781d157-1163-4d28-9a4e-714f51a3327b
+      - 9dd7b381-7f13-4cb4-ac82-d30c556868e5
       X-Download-Options:
       - noopen
       X-Frame-Options:
       - SAMEORIGIN
       X-Runtime:
-      - '0.503134'
+      - '0.019187'
       X-Content-Type-Options:
       - nosniff
       X-Powered-By:
       - Phusion Passenger 6.0.7
       Etag:
-      - W/"2e41995432ca4d4073118f936d1bffb1"
+      - W/"0f9a4628c569f252c8804d2fd43badee"
       Status:
       - 200 OK
       Transfer-Encoding:
@@ -58,6 +58,6 @@ http_interactions:
       - application/json; charset=utf-8
     body:
       encoding: UTF-8
-      string: '{"commission_histories":[{"created_at":"2022-03-27T18:12:45.519Z","commission_before":null,"commission_after":100.0,"epoch":302,"network":"testnet","id":269298,"epoch_completion":94.07,"batch_uuid":"4253e720-8267-4cf4-a61a-a1613adaebd4","account":"7bAFVtFKM9XzNoJH9Tr5YD791EhuozT29eA8mAp64Qg5","name":null},{"created_at":"2022-03-27T15:00:59.799Z","commission_before":100.0,"commission_after":0.0,"epoch":302,"network":"testnet","id":269297,"epoch_completion":89.07,"batch_uuid":"215cfc31-8486-4c13-8787-f46d63f9074f","account":"EicET7E1Qj5b9NAFU5WgAVbjwxxiAxGchAea9dj1XsDD","name":null},{"created_at":"2022-03-26T22:44:21.912Z","commission_before":null,"commission_after":100.0,"epoch":302,"network":"testnet","id":269296,"epoch_completion":64.16,"batch_uuid":"e00e73f8-89ca-47c6-a485-b6c8748e09b7","account":"4ba2dRU1jFqvGR2ndk2gGPQPQYM62i7fEK5X42gvm3cS","name":null},{"created_at":"2022-03-26T21:22:40.717Z","commission_before":null,"commission_after":100.0,"epoch":302,"network":"testnet","id":269295,"epoch_completion":61.94,"batch_uuid":"2dd8c629-2da3-48c9-92a2-349276c8f0fe","account":"2MH8dkqsk7GQfcDZzFo5orG2H7cyQnxFNf3WZo7WSuho","name":null},{"created_at":"2022-03-26T13:17:50.394Z","commission_before":null,"commission_after":100.0,"epoch":302,"network":"testnet","id":269293,"epoch_completion":49.65,"batch_uuid":"7bab4a65-92a8-4a36-9238-59e2c88a6f47","account":"8WrPsNcofrTCP5nCZRU9rZgzMbpz3wENBKipTxyZVbYW","name":null}],"total_count":165}'
-  recorded_at: Mon, 28 Mar 2022 08:01:03 GMT
+      string: '{"stake_pools":[{"id":4,"authority":"25jjjw9kBPoHtCLEoWu2zx6ZdXEYKPUbZ6zweJ561rbT","average_apy":0.11333,"average_delinquent":0.0,"average_lifetime":310,"average_score":5.43,"average_skipped_slots":0.128964,"average_uptime":6.57143,"average_validators_commission":61.2143,"manager_fee":null,"deposit_fee":null,"withdrawal_fee":null,"name":"Jpool","network":"testnet","ticker":null,"validators_count":14,"total_stake":24796028688317,"average_stake":1771144906308}]}'
+  recorded_at: Tue, 29 Mar 2022 07:16:42 GMT
 recorded_with: VCR 6.1.0
