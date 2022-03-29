@@ -27,7 +27,7 @@ Full api documentation is available on https://www.validators.app/api-documentat
 If you want to use any of the api method just create a new SolanaValidatorsClient object providing your api token as follows:
 
 ```ruby
-client = SolanaValidatorsClient.new("your_api_token")
+client = SolanaValidatorsClient.new(token: "your_api_token")
 ```
 
 then you can use any endpoint as follows:
@@ -39,7 +39,7 @@ client.<post || get>_<endpoint_path>(params)
 Example:
 
 ```ruby
-client = SolanaValidatorsClient.new("your_api_token")
+client = SolanaValidatorsClient.new(token: "your_api_token")
 client.get_validators(network: "testnet", order: "score")
 
 # returns a list of validators from testnet ordered by score
@@ -48,7 +48,7 @@ client.get_validators(network: "testnet", order: "score")
 ## List of available endpoints:
 
 ```ruby
-client = SolanaValidatorsClient.new("your_api_token")
+client = SolanaValidatorsClient.new(token: "your_api_token")
 
 # Server ping
 # The ping endpoint will allow you to test your connection to the server.
@@ -143,16 +143,16 @@ client.post_ping_thing_batch(
     network: @testnet_network,
     transactions: [
         {
-        application: "cli",
-        commitment_level: "finished",
-        signature: "tested_signature",
-        reported_at: DateTime.now,
-        success: true,
-        time: 123,
-        transaction_type: "transfer"
+            application: "cli",
+            commitment_level: "finished",
+            signature: "tested_signature",
+            reported_at: DateTime.now,
+            success: true,
+            time: 123,
+            transaction_type: "transfer"
         }
     ]
-    )
+)
 
 # Ping Thing List
 # This Ping Thing List endpoint will return a list of pings for the requested network.

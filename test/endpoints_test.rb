@@ -8,7 +8,7 @@ class EndpointsTest < Minitest::Test
     @testnet_network = "testnet"
     @mainnet_network = "mainnet"
     @account = "DDnAqxJVFo2GVTujibHt5cjevHMSE9bo8HJaydHoshdp" # BlockLogic
-    @client = SolanaValidatorsClient.new(ENV["API_TOKEN"], @stage_url)
+    @client = SolanaValidatorsClient.new(token: ENV["API_TOKEN"], url: @stage_url)
   end
 
   def test_get_ping_returns_correct_json
@@ -156,7 +156,6 @@ class EndpointsTest < Minitest::Test
         time: 123,
         transaction_type: "transfer"
       )
-      response = JSON.parse(resp.body)
 
       assert_equal 201, resp.code
       assert_equal expected_response, resp.body
@@ -181,7 +180,6 @@ class EndpointsTest < Minitest::Test
           }
         ]
       )
-      response = JSON.parse(resp.body)
 
       assert_equal 201, resp.code
       assert_equal expected_response, resp.body
