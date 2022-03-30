@@ -1,0 +1,63 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://stage.validators.app/api/v1/sol-prices?exchange=coin_gecko
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Content-Type:
+      - application/json
+      Token:
+      - "<API_TOKEN>"
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Mon, 28 Mar 2022 08:49:47 GMT
+      Server:
+      - Apache/2.4.29 (Ubuntu)
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      Vary:
+      - Origin
+      Referrer-Policy:
+      - strict-origin-when-cross-origin
+      X-Permitted-Cross-Domain-Policies:
+      - none
+      X-Xss-Protection:
+      - 1; mode=block
+      X-Request-Id:
+      - 4cfabde4-8b2f-419b-8a4a-6715a81de111
+      X-Download-Options:
+      - noopen
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Runtime:
+      - '0.034369'
+      X-Content-Type-Options:
+      - nosniff
+      X-Powered-By:
+      - Phusion Passenger 6.0.7
+      Etag:
+      - W/"88ac3e1c1c232c32d1cff4526c52cc55"
+      Status:
+      - 200 OK
+      Transfer-Encoding:
+      - chunked
+      Content-Type:
+      - application/json; charset=utf-8
+    body:
+      encoding: UTF-8
+      string: '[{"id":1269,"exchange":"coin_gecko","currency":"usd","epoch_mainnet":283,"epoch_testnet":291,"open":null,"close":null,"high":null,"low":null,"volume":"1316252928.33416","datetime_from_exchange":"2022-02-27T00:00:00.000Z","created_at":"2022-02-28T00:10:04.821Z","updated_at":"2022-02-28T00:10:04.821Z","average_price":"90.10798522206623"},{"id":1272,"exchange":"coin_gecko","currency":"usd","epoch_mainnet":284,"epoch_testnet":292,"open":null,"close":null,"high":null,"low":null,"volume":"1559328417.424525","datetime_from_exchange":"2022-02-28T00:00:00.000Z","created_at":"2022-03-01T00:10:04.308Z","updated_at":"2022-03-01T00:10:04.308Z","average_price":"85.56819666616444"},{"id":1274,"exchange":"coin_gecko","currency":"usd","epoch_mainnet":284,"epoch_testnet":292,"open":null,"close":null,"high":null,"low":null,"volume":"2674553479.218074","datetime_from_exchange":"2022-03-01T00:00:00.000Z","created_at":"2022-03-02T00:10:05.260Z","updated_at":"2022-03-02T00:10:05.260Z","average_price":"99.57917400308274"},{"id":1275,"exchange":"coin_gecko","currency":"usd","epoch_mainnet":284,"epoch_testnet":292,"open":null,"close":null,"high":null,"low":null,"volume":"2476563020.453062","datetime_from_exchange":"2022-03-02T00:00:00.000Z","created_at":"2022-03-03T00:10:05.074Z","updated_at":"2022-03-03T00:10:05.074Z","average_price":"98.75845247572444"},{"id":1278,"exchange":"coin_gecko","currency":"usd","epoch_mainnet":285,"epoch_testnet":293,"open":null,"close":null,"high":null,"low":null,"volume":"2951039198.751416","datetime_from_exchange":"2022-03-03T00:00:00.000Z","created_at":"2022-03-04T00:10:05.548Z","updated_at":"2022-03-04T00:10:05.548Z","average_price":"100.7898652317599"},{"id":1280,"exchange":"coin_gecko","currency":"usd","epoch_mainnet":285,"epoch_testnet":293,"open":null,"close":null,"high":null,"low":null,"volume":"1795535826.555052","datetime_from_exchange":"2022-03-04T00:00:00.000Z","created_at":"2022-03-05T00:10:05.319Z","updated_at":"2022-03-05T00:10:05.319Z","average_price":"95.55882629437178"},{"id":1281,"exchange":"coin_gecko","currency":"usd","epoch_mainnet":285,"epoch_testnet":294,"open":null,"close":null,"high":null,"low":null,"volume":"2029343357.151517","datetime_from_exchange":"2022-03-05T00:00:00.000Z","created_at":"2022-03-06T00:10:04.813Z","updated_at":"2022-03-06T00:10:04.813Z","average_price":"88.2451628518882"},{"id":1284,"exchange":"coin_gecko","currency":"usd","epoch_mainnet":286,"epoch_testnet":294,"open":null,"close":null,"high":null,"low":null,"volume":"1164108659.273321","datetime_from_exchange":"2022-03-06T00:00:00.000Z","created_at":"2022-03-07T00:10:04.508Z","updated_at":"2022-03-07T00:10:04.508Z","average_price":"89.78895188514215"},{"id":1285,"exchange":"coin_gecko","currency":"usd","epoch_mainnet":286,"epoch_testnet":294,"open":null,"close":null,"high":null,"low":null,"volume":"1139246888.332823","datetime_from_exchange":"2022-03-07T00:00:00.000Z","created_at":"2022-03-08T00:10:04.638Z","updated_at":"2022-03-08T00:10:04.638Z","average_price":"84.63923583859497"},{"id":1287,"exchange":"coin_gecko","currency":"usd","epoch_mainnet":286,"epoch_testnet":295,"open":null,"close":null,"high":null,"low":null,"volume":"1884457926.903441","datetime_from_exchange":"2022-03-08T00:00:00.000Z","created_at":"2022-03-09T00:10:05.050Z","updated_at":"2022-03-09T00:10:05.050Z","average_price":"82.06724918865827"},{"id":1290,"exchange":"coin_gecko","currency":"usd","epoch_mainnet":287,"epoch_testnet":295,"open":null,"close":null,"high":null,"low":null,"volume":"1704061421.169517","datetime_from_exchange":"2022-03-09T00:00:00.000Z","created_at":"2022-03-10T00:10:04.946Z","updated_at":"2022-03-10T00:10:04.946Z","average_price":"82.25360674455618"},{"id":1291,"exchange":"coin_gecko","currency":"usd","epoch_mainnet":287,"epoch_testnet":296,"open":null,"close":null,"high":null,"low":null,"volume":"2082131364.035624","datetime_from_exchange":"2022-03-10T00:00:00.000Z","created_at":"2022-03-11T00:10:04.560Z","updated_at":"2022-03-11T00:10:04.560Z","average_price":"88.185052838507"},{"id":1293,"exchange":"coin_gecko","currency":"usd","epoch_mainnet":287,"epoch_testnet":296,"open":null,"close":null,"high":null,"low":null,"volume":"1706781764.376843","datetime_from_exchange":"2022-03-11T00:00:00.000Z","created_at":"2022-03-12T00:10:04.462Z","updated_at":"2022-03-12T00:10:04.462Z","average_price":"83.02500801904657"},{"id":1295,"exchange":"coin_gecko","currency":"usd","epoch_mainnet":288,"epoch_testnet":296,"open":null,"close":null,"high":null,"low":null,"volume":"1382838751.097293","datetime_from_exchange":"2022-03-12T00:00:00.000Z","created_at":"2022-03-13T00:10:04.399Z","updated_at":"2022-03-13T00:10:04.399Z","average_price":"80.69121367419427"},{"id":1298,"exchange":"coin_gecko","currency":"usd","epoch_mainnet":288,"epoch_testnet":297,"open":null,"close":null,"high":null,"low":null,"volume":"776192786.1232313","datetime_from_exchange":"2022-03-13T00:00:00.000Z","created_at":"2022-03-14T00:10:04.442Z","updated_at":"2022-03-14T00:10:04.442Z","average_price":"81.60999773356421"},{"id":1299,"exchange":"coin_gecko","currency":"usd","epoch_mainnet":288,"epoch_testnet":297,"open":null,"close":null,"high":null,"low":null,"volume":"949636517.694404","datetime_from_exchange":"2022-03-14T00:00:00.000Z","created_at":"2022-03-15T00:10:05.186Z","updated_at":"2022-03-15T00:10:05.186Z","average_price":"78.99818199674436"},{"id":1302,"exchange":"coin_gecko","currency":"usd","epoch_mainnet":289,"epoch_testnet":298,"open":null,"close":null,"high":null,"low":null,"volume":"1317770720.468915","datetime_from_exchange":"2022-03-15T00:00:00.000Z","created_at":"2022-03-16T00:10:05.099Z","updated_at":"2022-03-16T00:10:05.099Z","average_price":"81.16870194524185"},{"id":1303,"exchange":"coin_gecko","currency":"usd","epoch_mainnet":289,"epoch_testnet":298,"open":null,"close":null,"high":null,"low":null,"volume":"1247125823.150573","datetime_from_exchange":"2022-03-16T00:00:00.000Z","created_at":"2022-03-17T00:10:04.970Z","updated_at":"2022-03-17T00:10:04.970Z","average_price":"82.94439063872372"},{"id":1306,"exchange":"coin_gecko","currency":"usd","epoch_mainnet":289,"epoch_testnet":298,"open":null,"close":null,"high":null,"low":null,"volume":"1872435776.01945","datetime_from_exchange":"2022-03-17T00:00:00.000Z","created_at":"2022-03-18T00:10:05.218Z","updated_at":"2022-03-18T00:10:05.218Z","average_price":"87.84993508447106"},{"id":1308,"exchange":"coin_gecko","currency":"usd","epoch_mainnet":290,"epoch_testnet":299,"open":null,"close":null,"high":null,"low":null,"volume":"1939375410.172395","datetime_from_exchange":"2022-03-18T00:00:00.000Z","created_at":"2022-03-19T00:10:04.821Z","updated_at":"2022-03-19T00:10:04.821Z","average_price":"87.96768776096062"},{"id":1309,"exchange":"coin_gecko","currency":"usd","epoch_mainnet":290,"epoch_testnet":299,"open":null,"close":null,"high":null,"low":null,"volume":"2216690010.243822","datetime_from_exchange":"2022-03-19T00:00:00.000Z","created_at":"2022-03-20T00:10:05.452Z","updated_at":"2022-03-20T00:10:05.452Z","average_price":"89.90595375292516"},{"id":1311,"exchange":"coin_gecko","currency":"usd","epoch_mainnet":291,"epoch_testnet":300,"open":null,"close":null,"high":null,"low":null,"volume":"1493437229.123249","datetime_from_exchange":"2022-03-20T00:00:00.000Z","created_at":"2022-03-21T00:10:05.067Z","updated_at":"2022-03-21T00:10:05.067Z","average_price":"92.40408532356939"},{"id":1313,"exchange":"coin_gecko","currency":"usd","epoch_mainnet":291,"epoch_testnet":300,"open":null,"close":null,"high":null,"low":null,"volume":"954767656.0285732","datetime_from_exchange":"2022-03-21T00:00:00.000Z","created_at":"2022-03-22T00:10:04.594Z","updated_at":"2022-03-22T00:10:04.594Z","average_price":"88.59618802144291"},{"id":1315,"exchange":"coin_gecko","currency":"usd","epoch_mainnet":291,"epoch_testnet":300,"open":null,"close":null,"high":null,"low":null,"volume":"1145750669.041704","datetime_from_exchange":"2022-03-22T00:00:00.000Z","created_at":"2022-03-23T00:10:04.444Z","updated_at":"2022-03-23T00:10:04.444Z","average_price":"88.77017295134721"},{"id":1318,"exchange":"coin_gecko","currency":"usd","epoch_mainnet":292,"epoch_testnet":301,"open":null,"close":null,"high":null,"low":null,"volume":"1405727754.233131","datetime_from_exchange":"2022-03-23T00:00:00.000Z","created_at":"2022-03-24T00:10:05.285Z","updated_at":"2022-03-24T00:10:05.285Z","average_price":"90.50413587116581"},{"id":1320,"exchange":"coin_gecko","currency":"usd","epoch_mainnet":292,"epoch_testnet":301,"open":null,"close":null,"high":null,"low":null,"volume":"1433431548.544861","datetime_from_exchange":"2022-03-24T00:00:00.000Z","created_at":"2022-03-25T00:10:05.974Z","updated_at":"2022-03-25T00:10:05.974Z","average_price":"94.9197584526827"},{"id":1322,"exchange":"coin_gecko","currency":"usd","epoch_mainnet":292,"epoch_testnet":301,"open":null,"close":null,"high":null,"low":null,"volume":"2412096877.261528","datetime_from_exchange":"2022-03-25T00:00:00.000Z","created_at":"2022-03-26T00:10:05.061Z","updated_at":"2022-03-26T00:10:05.061Z","average_price":"102.1802283204168"},{"id":1323,"exchange":"coin_gecko","currency":"usd","epoch_mainnet":293,"epoch_testnet":302,"open":null,"close":null,"high":null,"low":null,"volume":"1817213990.634852","datetime_from_exchange":"2022-03-26T00:00:00.000Z","created_at":"2022-03-27T00:10:05.300Z","updated_at":"2022-03-27T00:10:05.300Z","average_price":"98.64674268340561"},{"id":1325,"exchange":"coin_gecko","currency":"usd","epoch_mainnet":293,"epoch_testnet":302,"open":null,"close":null,"high":null,"low":null,"volume":"1009509747.372562","datetime_from_exchange":"2022-03-27T00:00:00.000Z","created_at":"2022-03-28T00:10:04.407Z","updated_at":"2022-03-28T00:10:04.407Z","average_price":"101.6412104049599"}]'
+  recorded_at: Mon, 28 Mar 2022 08:49:47 GMT
+recorded_with: VCR 6.1.0

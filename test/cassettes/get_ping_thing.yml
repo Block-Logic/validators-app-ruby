@@ -1,0 +1,63 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://stage.validators.app/api/v1/ping-thing/testnet?limit=5
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Content-Type:
+      - application/json
+      Token:
+      - "<API_TOKEN>"
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Mon, 28 Mar 2022 08:35:26 GMT
+      Server:
+      - Apache/2.4.29 (Ubuntu)
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      Vary:
+      - Origin
+      Referrer-Policy:
+      - strict-origin-when-cross-origin
+      X-Permitted-Cross-Domain-Policies:
+      - none
+      X-Xss-Protection:
+      - 1; mode=block
+      X-Request-Id:
+      - 739ad2f9-feb9-40f7-9fd3-a10a1c1956f1
+      X-Download-Options:
+      - noopen
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Runtime:
+      - '0.049687'
+      X-Content-Type-Options:
+      - nosniff
+      X-Powered-By:
+      - Phusion Passenger 6.0.7
+      Etag:
+      - W/"a87f40e584ee61a8f9d2888acad314fb"
+      Status:
+      - 200 OK
+      Transfer-Encoding:
+      - chunked
+      Content-Type:
+      - application/json; charset=utf-8
+    body:
+      encoding: UTF-8
+      string: '[{"application":"CLI","commitment_level":"confirmed","created_at":"2022-02-24T15:30:37.344Z","network":"testnet","response_time":10649,"signature":"0d7f418e4d1a3f80dc8a266cd867f766b73d9c80feea36524dfd074068bdef9221e356c192ac6ac71b71404d","success":true,"transaction_type":"transfer","reported_at":"2022-02-24T15:30:26.000Z","username":"brian.long"},{"application":"CLI","commitment_level":"confirmed","created_at":"2022-02-24T15:30:56.536Z","network":"testnet","response_time":21425,"signature":"0d7f418e4d1a3f80dc8a266cd867f766b73d9c80feea36524dfd074068bdef9221e356c192ac6ac71b71404d","success":true,"transaction_type":"transfer","reported_at":"2022-02-24T15:29:37.000Z","username":"brian.long"},{"application":"CLI","commitment_level":"processed","created_at":"2022-02-24T15:30:37.313Z","network":"testnet","response_time":22292,"signature":"0d7f418e4d1a3f80dc8a266cd867f766b73d9c80feea36524dfd074068bdef9221e356c192ac6ac71b71404d","success":true,"transaction_type":"transfer","reported_at":"2022-02-24T15:27:45.000Z","username":"brian.long"},{"application":"CLI","commitment_level":"processed","created_at":"2022-02-24T15:27:37.456Z","network":"testnet","response_time":5759,"signature":"0d7f418e4d1a3f80dc8a266cd867f766b73d9c80feea36524dfd074068bdef9221e356c192ac6ac71b71404d","success":true,"transaction_type":"transfer","reported_at":"2022-02-24T15:27:27.000Z","username":"brian.long"},{"application":"CLI","commitment_level":"processed","created_at":"2022-02-24T15:27:25.998Z","network":"testnet","response_time":5588,"signature":"0d7f418e4d1a3f80dc8a266cd867f766b73d9c80feea36524dfd074068bdef9221e356c192ac6ac71b71404d","success":true,"transaction_type":"transfer","reported_at":"2022-02-24T15:27:16.000Z","username":"brian.long"}]'
+  recorded_at: Mon, 28 Mar 2022 08:35:26 GMT
+recorded_with: VCR 6.1.0

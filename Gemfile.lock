@@ -1,24 +1,37 @@
 PATH
   remote: .
   specs:
-    solana_validators_client (0.1.0)
+    solana_validators_client (1.0.0.pre)
       httparty (~> 0.20)
 
 GEM
   remote: https://rubygems.org/
   specs:
+    addressable (2.8.0)
+      public_suffix (>= 2.0.2, < 5.0)
     ast (2.4.2)
+    crack (0.4.5)
+      rexml
+    dotenv (2.7.6)
+    hashdiff (1.0.1)
     httparty (0.20.0)
       mime-types (~> 3.0)
       multi_xml (>= 0.5.2)
     mime-types (3.4.1)
       mime-types-data (~> 3.2015)
     mime-types-data (3.2022.0105)
+    minispec-metadata (2.0.0)
+      minitest
     minitest (5.15.0)
+    minitest-vcr (1.4.0)
+      minispec-metadata (~> 2.0)
+      minitest (>= 4.7.5)
+      vcr (>= 2.9)
     multi_xml (0.6.0)
-    parallel (1.21.0)
+    parallel (1.22.1)
     parser (3.1.1.0)
       ast (~> 2.4.1)
+    public_suffix (4.0.6)
     rainbow (3.1.1)
     rake (13.0.6)
     regexp_parser (2.2.1)
@@ -36,16 +49,25 @@ GEM
       parser (>= 3.1.1.0)
     ruby-progressbar (1.11.0)
     unicode-display_width (1.8.0)
+    vcr (6.1.0)
+    webmock (3.14.0)
+      addressable (>= 2.8.0)
+      crack (>= 0.3.2)
+      hashdiff (>= 0.4.0, < 2.0.0)
 
 PLATFORMS
   x86_64-darwin-20
+  x86_64-linux
 
 DEPENDENCIES
+  dotenv (~> 2.7.6)
   httparty (~> 0.20)
   minitest (~> 5.0)
+  minitest-vcr (~> 1.4.0)
   rake (~> 13.0)
   rubocop (~> 0.80)
   solana_validators_client!
+  webmock (~> 3.14.0)
 
 BUNDLED WITH
-   2.2.2
+   2.3.5

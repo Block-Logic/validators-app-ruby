@@ -1,0 +1,63 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://stage.validators.app/api/v1/commission-changes/testnet?page=2&per=5
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Content-Type:
+      - application/json
+      Token:
+      - "<API_TOKEN>"
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Fri, 25 Mar 2022 11:14:15 GMT
+      Server:
+      - Apache/2.4.29 (Ubuntu)
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      Vary:
+      - Origin
+      Referrer-Policy:
+      - strict-origin-when-cross-origin
+      X-Permitted-Cross-Domain-Policies:
+      - none
+      X-Xss-Protection:
+      - 1; mode=block
+      X-Request-Id:
+      - 2d943a45-b7dc-448a-a7a9-880725d5ff5a
+      X-Download-Options:
+      - noopen
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Runtime:
+      - '0.153996'
+      X-Content-Type-Options:
+      - nosniff
+      X-Powered-By:
+      - Phusion Passenger 6.0.7
+      Etag:
+      - W/"87f6216beb0c137ccea92f0af5130109"
+      Status:
+      - 200 OK
+      Transfer-Encoding:
+      - chunked
+      Content-Type:
+      - application/json; charset=utf-8
+    body:
+      encoding: UTF-8
+      string: '{"commission_histories":[{"created_at":"2022-03-24T23:18:49.079Z","commission_before":null,"commission_after":100.0,"epoch":301,"network":"testnet","id":269269,"epoch_completion":90.93,"batch_uuid":"0bd83612-2b24-4494-920a-41779352b47c","account":"3CpzeaQT32VWJejyBgXooNRmi75n8QRNAD7SHwgv6Hrg","name":null},{"created_at":"2022-03-24T22:40:02.568Z","commission_before":null,"commission_after":100.0,"epoch":301,"network":"testnet","id":269268,"epoch_completion":89.82,"batch_uuid":"a7ad9f3e-dcac-4805-9579-79f05b879547","account":"3J1AUKMQ5ZavobdzJ8yzRBcUpN9XzV3VfR5d1iVev3i9","name":null},{"created_at":"2022-03-24T21:49:00.082Z","commission_before":null,"commission_after":100.0,"epoch":301,"network":"testnet","id":269267,"epoch_completion":88.56,"batch_uuid":"236f39d0-94c8-479d-8188-c1ab18cded71","account":"HfkB17jhe4JnzUjrNHYjXtp76sXkUt6TR5mxoU8aWFDW","name":null},{"created_at":"2022-03-24T16:20:06.567Z","commission_before":null,"commission_after":100.0,"epoch":301,"network":"testnet","id":269265,"epoch_completion":80.05,"batch_uuid":"22df145a-aa99-4d88-b7d1-7c17006b81ad","account":"GKsy1HjivoXp6v9CZBM1gG7jtrCAZphEBQkXDpiwirLg","name":null},{"created_at":"2022-03-24T08:18:46.957Z","commission_before":null,"commission_after":100.0,"epoch":301,"network":"testnet","id":269261,"epoch_completion":67.72,"batch_uuid":"2f9b7c40-b46b-4845-b7fe-1709397bb842","account":"DgAseXdRqbcXyKoVzjkNvbu8HfGtTMKC2FzSb8kKqduX","name":null}],"total_count":184}'
+  recorded_at: Fri, 25 Mar 2022 11:14:15 GMT
+recorded_with: VCR 6.1.0

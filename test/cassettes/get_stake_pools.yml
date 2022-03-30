@@ -1,0 +1,63 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://stage.validators.app/api/v1/stake-pools/testnet?page=1&per=5
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Content-Type:
+      - application/json
+      Token:
+      - "<API_TOKEN>"
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Tue, 29 Mar 2022 07:16:42 GMT
+      Server:
+      - Apache/2.4.29 (Ubuntu)
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      Vary:
+      - Origin
+      Referrer-Policy:
+      - strict-origin-when-cross-origin
+      X-Permitted-Cross-Domain-Policies:
+      - none
+      X-Xss-Protection:
+      - 1; mode=block
+      X-Request-Id:
+      - 9dd7b381-7f13-4cb4-ac82-d30c556868e5
+      X-Download-Options:
+      - noopen
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Runtime:
+      - '0.019187'
+      X-Content-Type-Options:
+      - nosniff
+      X-Powered-By:
+      - Phusion Passenger 6.0.7
+      Etag:
+      - W/"0f9a4628c569f252c8804d2fd43badee"
+      Status:
+      - 200 OK
+      Transfer-Encoding:
+      - chunked
+      Content-Type:
+      - application/json; charset=utf-8
+    body:
+      encoding: UTF-8
+      string: '{"stake_pools":[{"id":4,"authority":"25jjjw9kBPoHtCLEoWu2zx6ZdXEYKPUbZ6zweJ561rbT","average_apy":0.11333,"average_delinquent":0.0,"average_lifetime":310,"average_score":5.43,"average_skipped_slots":0.128964,"average_uptime":6.57143,"average_validators_commission":61.2143,"manager_fee":null,"deposit_fee":null,"withdrawal_fee":null,"name":"Jpool","network":"testnet","ticker":null,"validators_count":14,"total_stake":24796028688317,"average_stake":1771144906308}]}'
+  recorded_at: Tue, 29 Mar 2022 07:16:42 GMT
+recorded_with: VCR 6.1.0

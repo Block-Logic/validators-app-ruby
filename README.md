@@ -27,7 +27,7 @@ Full api documentation is available on https://www.validators.app/api-documentat
 If you want to use any of the api method just create a new SolanaValidatorsClient object providing your api token as follows:
 
 ```ruby
-client = SolanaValidatorsClient.new("your_api_token")
+client = SolanaValidatorsClient.new(token: "your_api_token")
 ```
 
 then you can use any endpoint as follows:
@@ -39,10 +39,138 @@ client.<post || get>_<endpoint_path>(params)
 Example:
 
 ```ruby
-client = SolanaValidatorsClient.new("your_api_token")
+client = SolanaValidatorsClient.new(token: "your_api_token")
 client.get_validators(network: "testnet", order: "score")
 
 # returns a list of validators from testnet ordered by score
+```
+
+## List of available endpoints:
+
+```ruby
+client = SolanaValidatorsClient.new(token: "your_api_token")
+
+# Server ping
+# The ping endpoint will allow you to test your connection to the server.
+
+client.get_ping
+
+# Validators List
+# The Validators endpoint will return a list of validators for the requested network. 
+
+client.get_validators(
+    network: "testnet",
+    order: "score",
+    limit: 100,
+    page: 1,
+    q: "example"
+)
+
+# Validator Detail
+# The Validators endpoint will return a single validator for the requested network and account.
+
+client.get_validators(
+    network: "testnet",
+    id: "validator_account",
+    with_history: true
+)
+
+# Validator Block Production History
+# The Validator Block History endpoint will return a history of block production stats for the requested network and account.
+
+client.get_validator_block_history(
+    network: "testnet",
+    id: "validator_account"
+)
+
+# Epoch Index
+# The Epoch endpoint will return all epoch data.
+
+client.get_epochs(
+    network: "testnet",
+    per: 10,
+    page: 2
+)
+
+# Commission Change Index
+# The Commission Change endpoint will return all the changes in commission for a given period of time.
+
+client.get_commission_changes(
+    network: "testnet",
+    date_from: DateTime.now - 30.days,
+    date_to: DateTime.now,
+    per: 100,
+    page: 1,
+    query: "example"
+)
+
+# Stake Pools
+# The Stake Pools endpoint will return all the stake pools.
+
+client.get_stake_pools(
+    network: "testnet"
+)
+
+# Stake Accounts
+# The Stake Accounts endpoint will return all the stake accounts grouped by vote accounts.
+
+client.get_stake_accounts(
+    network: "testnet",
+    filter_account: "example",
+    sort_by: "epoch_desc",
+    per: 10,
+    page: 1
+)
+
+# Ping Thing Post
+# The Ping Thing Post endpoint allows you to push information about transaction times.
+
+client.post_ping_thing(
+    network: "testnet",
+    application: "cli",
+    commitment_level: "finished",
+    signature: "tested_signature",
+    reported_at: DateTime.now,
+    success: true,
+    time: 123,
+    transaction_type: "transfer"
+)
+
+# Ping Thing Post Batch
+# The Ping Thing Batch endpoint allows you to push multiple transaction informations at once.
+
+client.post_ping_thing_batch(
+    network: @testnet_network,
+    transactions: [
+        {
+            application: "cli",
+            commitment_level: "finished",
+            signature: "tested_signature",
+            reported_at: DateTime.now,
+            success: true,
+            time: 123,
+            transaction_type: "transfer"
+        }
+    ]
+)
+
+# Ping Thing List
+# This Ping Thing List endpoint will return a list of pings for the requested network.
+
+client.get_ping_thing(
+    network: "testnet",
+    limit: 100,
+    page: 1
+)
+
+# Sol Prices
+# The Sol Prices endpoind will return prices gathered from multiple exchanges.
+
+client.get_sol_prices(
+    from: DateTime.now - 30.days,
+    to: DateTime.now,
+    exchange: "coin_gecko"
+)
 ```
 
 ## Development

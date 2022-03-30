@@ -1,0 +1,30 @@
+name: Test Suite
+
+on: [push]
+
+jobs:
+  test:
+    runs-on: ubuntu-20.04
+    strategy:
+      fail-fast: false
+      matrix:
+        ruby-version: [3.0, 2.7, 2.6]
+    steps:
+      - uses: actions/checkout@v2
+      - name: Set up Ruby ${{ matrix.ruby-version }}
+        uses: ruby/setup-ruby@v1
+        with:
+          ruby-version: ${{ matrix.ruby-version }}
+          bundler-cache: true
+      - name: bundle install
+        run: bundle install
+      - name: set up dotenv
+        env:
+          API_TOKEN: ${{ secrets.API_TOKEN }}
+        run: |
+          echo $API_TOKEN | base64 --decode > .env
+      - name: Run tests
+        env:
+          RAILS_ENV: test
+        run: |
+          bundle exec rake test
