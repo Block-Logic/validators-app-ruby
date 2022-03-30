@@ -1,6 +1,6 @@
 # frozen_string_literal: true
 
-require_relative "lib/solana_validators_client"
+require_relative "lib/validators_app_ruby"
 
 client = ValidatorsAppRuby.new("token")
 
