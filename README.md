@@ -7,7 +7,7 @@ This gem helps to utilize the validators.app API.
 Add this line to your application's Gemfile:
 
 ```ruby
-gem 'validators-app-ruby'
+gem 'validators_app_ruby'
 ```
 
 And then execute:
@@ -40,7 +40,9 @@ Example:
 
 ```ruby
 client = ValidatorsAppRuby.new(token: "your_api_token")
-client.get_validators(network: "testnet", order: "score")
+response = client.get_validators(network: "testnet", order: "score")
+response.body # response in json format
+response.parsed_response # response as a ruby hash
 
 # returns a list of validators from testnet ordered by score
 ```
@@ -55,61 +57,59 @@ client = ValidatorsAppRuby.new(token: "your_api_token")
 
 client.get_ping
 
+
 # Validators List
 # The Validators endpoint will return a list of validators for the requested network. 
 
 client.get_validators(
-    network: "testnet",
+    network: "mainnet",
     order: "score",
     limit: 100,
     page: 1,
-    q: "example"
+    q: "Block Logic"
 )
+
 
 # Validator Detail
 # The Validators endpoint will return a single validator for the requested network and account.
 
 client.get_validators(
-    network: "testnet",
-    id: "validator_account",
+    network: "mainnet",
+    id: "DDnAqxJVFo2GVTujibHt5cjevHMSE9bo8HJaydHoshdp",
     with_history: true
 )
+
 
 # Validator Block Production History
 # The Validator Block History endpoint will return a history of block production stats for the requested network and account.
 
-client.get_validator_block_history(
-    network: "testnet",
-    id: "validator_account"
-)
+client.get_validator_block_history(network: "testnet", id: "DDnAqxJVFo2GVTujibHt5cjevHMSE9bo8HJaydHoshdp")
+
 
 # Epoch Index
 # The Epoch endpoint will return all epoch data.
 
-client.get_epochs(
-    network: "testnet",
-    per: 10,
-    page: 2
-)
+client.get_epochs(network: "testnet", per: 10, page: 2)
+
 
 # Commission Change Index
 # The Commission Change endpoint will return all the changes in commission for a given period of time.
 
 client.get_commission_changes(
-    network: "testnet",
+    network: "mainnet",
     date_from: DateTime.now - 30.days,
     date_to: DateTime.now,
     per: 100,
     page: 1,
-    query: "example"
+    query: "Block Logic"
 )
+
 
 # Stake Pools
 # The Stake Pools endpoint will return all the stake pools.
 
-client.get_stake_pools(
-    network: "testnet"
-)
+client.get_stake_pools(network: "testnet")
+
 
 # Stake Accounts
 # The Stake Accounts endpoint will return all the stake accounts grouped by vote accounts.
@@ -121,6 +121,7 @@ client.get_stake_accounts(
     per: 10,
     page: 1
 )
+
 
 # Ping Thing Post
 # The Ping Thing Post endpoint allows you to push information about transaction times.
@@ -135,6 +136,7 @@ client.post_ping_thing(
     time: 123,
     transaction_type: "transfer"
 )
+
 
 # Ping Thing Post Batch
 # The Ping Thing Batch endpoint allows you to push multiple transaction informations at once.
@@ -154,14 +156,12 @@ client.post_ping_thing_batch(
     ]
 )
 
+
 # Ping Thing List
 # This Ping Thing List endpoint will return a list of pings for the requested network.
 
-client.get_ping_thing(
-    network: "testnet",
-    limit: 100,
-    page: 1
-)
+client.get_ping_thing(network: "testnet", limit: 100, page: 1)
+
 
 # Sol Prices
 # The Sol Prices endpoind will return prices gathered from multiple exchanges.
