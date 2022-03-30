@@ -1,7 +1,7 @@
 # frozen_string_literal: true
 
-require_relative "lib/solana_validators_client"
+require_relative "lib/validators_app_ruby"
 
-client = SolanaValidatorsClient.new("token")
+client = ValidatorsAppRuby.new("token")
 
 puts client.getting_ping

@@ -1,9 +1,9 @@
 # frozen_string_literal: true
 
 require 'httparty'
-require_relative "solana_validators_client/version"
+require_relative "validators_app_ruby/version"
 
-class SolanaValidatorsClient
+class ValidatorsAppRuby
   class Error < StandardError; end
 
   include HTTParty

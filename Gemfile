@@ -2,7 +2,7 @@
 
 source "https://rubygems.org"
 
-# Specify your gem's dependencies in solana_validators_client.gemspec
+# Specify your gem's dependencies in validators_app_ruby.gemspec
 gemspec
 
 gem "rake", "~> 13.0"

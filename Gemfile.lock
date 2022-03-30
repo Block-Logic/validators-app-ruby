@@ -1,7 +1,7 @@
 PATH
   remote: .
   specs:
-    solana_validators_client (1.0.0.pre)
+    validators_app_ruby (1.0.0.pre)
       httparty (~> 0.20)
 
 GEM
@@ -66,7 +66,7 @@ DEPENDENCIES
   minitest-vcr (~> 1.4.0)
   rake (~> 13.0)
   rubocop (~> 0.80)
-  solana_validators_client!
+  validators_app_ruby!
   webmock (~> 3.14.0)
 
 BUNDLED WITH
