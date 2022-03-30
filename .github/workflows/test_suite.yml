@@ -22,7 +22,7 @@ jobs:
         env:
           API_TOKEN: ${{ secrets.API_TOKEN }}
         run: |
-          [ "$GITHUB_REF_NAME" = qa ] && echo $API_TOKEN | base64 --decode > .env
+          echo $API_TOKEN | base64 --decode > .env
       - name: Run tests
         env:
           RAILS_ENV: test
