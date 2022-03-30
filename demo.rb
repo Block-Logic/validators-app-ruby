@@ -2,6 +2,6 @@
 
 require_relative "lib/solana_validators_client"
 
-client = SolanaValidatorsClient.new("token")
+client = ValidatorsAppRuby.new("token")
 
 puts client.getting_ping

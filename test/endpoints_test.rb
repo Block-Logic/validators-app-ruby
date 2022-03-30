@@ -8,7 +8,7 @@ class EndpointsTest < Minitest::Test
     @testnet_network = "testnet"
     @mainnet_network = "mainnet"
     @account = "DDnAqxJVFo2GVTujibHt5cjevHMSE9bo8HJaydHoshdp" # BlockLogic
-    @client = SolanaValidatorsClient.new(token: ENV["API_TOKEN"], url: @stage_url)
+    @client = ValidatorsAppRuby.new(token: ENV["API_TOKEN"], url: @stage_url)
   end
 
   def test_get_ping_returns_correct_json

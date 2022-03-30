@@ -24,10 +24,10 @@ Please note that in order to use this client, you need to obtain the api token f
 
 Full api documentation is available on https://www.validators.app/api-documentation.
 
-If you want to use any of the api method just create a new SolanaValidatorsClient object providing your api token as follows:
+If you want to use any of the api method just create a new ValidatorsAppRuby object providing your api token as follows:
 
 ```ruby
-client = SolanaValidatorsClient.new(token: "your_api_token")
+client = ValidatorsAppRuby.new(token: "your_api_token")
 ```
 
 then you can use any endpoint as follows:
@@ -39,7 +39,7 @@ client.<post || get>_<endpoint_path>(params)
 Example:
 
 ```ruby
-client = SolanaValidatorsClient.new(token: "your_api_token")
+client = ValidatorsAppRuby.new(token: "your_api_token")
 client.get_validators(network: "testnet", order: "score")
 
 # returns a list of validators from testnet ordered by score
@@ -48,7 +48,7 @@ client.get_validators(network: "testnet", order: "score")
 ## List of available endpoints:
 
 ```ruby
-client = SolanaValidatorsClient.new(token: "your_api_token")
+client = ValidatorsAppRuby.new(token: "your_api_token")
 
 # Server ping
 # The ping endpoint will allow you to test your connection to the server.

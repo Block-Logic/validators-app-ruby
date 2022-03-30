@@ -1,10 +1,10 @@
 # frozen_string_literal: true
 
-require_relative "lib/solana_validators_client/version"
+require_relative "lib/validators_app_ruby/version"
 
 Gem::Specification.new do |spec|
-  spec.name          = "validators-app-ruby"
-  spec.version       = SolanaValidatorsClientVersion::VERSION
+  spec.name          = "validators_app_ruby"
+  spec.version       = ValidatorsAppRubyVersion::VERSION
   spec.authors       = ["BlockLogic team"]
   spec.email         = ["maciej.kocyla@polcode.net"]
 
