@@ -21,6 +21,8 @@ jobs:
           API_TOKEN: ${{ secrets.API_TOKEN }}
         run: |
           echo $API_TOKEN | base64 --decode > .env
+      - name: bundle install
+        run: bundle install
       - name: Run tests
         env:
           RAILS_ENV: test
