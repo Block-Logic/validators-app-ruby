@@ -3,6 +3,7 @@
 require 'httparty'
 require_relative "validators_app_ruby/version"
 
+
 class ValidatorsAppRuby
   class Error < StandardError; end
 

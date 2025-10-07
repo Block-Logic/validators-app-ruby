@@ -123,6 +123,15 @@ client.get_stake_accounts(
 )
 
 
+# Stake Explorer
+# The Explorer Stake Accounts endpoint will return all the stake accounts according to provided criteria. Only mainnet network is available for this query.
+
+client.get_stake_explorer(
+    network: "mainnet"
+    staker: "DDnAqxJVFo2GVTujibHt5cjevHMSE9bo8HJaydHoshdp"
+)
+
+
 # Ping Thing Post
 # The Ping Thing Post endpoint allows you to push information about transaction times.
 
