@@ -5,7 +5,7 @@ require "validators_app_ruby"
 require "dotenv/load"
 require "minitest/autorun"
 require "webmock/minitest"
-require "minitest-vcr"
+require "vcr"
 
 VCR.configure do |c|
   c.cassette_library_dir = "test/cassettes"

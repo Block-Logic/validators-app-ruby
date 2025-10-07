@@ -7,8 +7,10 @@ gemspec
 
 gem "rake", "~> 13.0"
 
-gem "minitest", "~> 5.0"
+gem "minitest", "~> 5.25"
 
-gem "rubocop", "~> 0.80"
+gem "rubocop", "~> 0.81"
 
-gem "httparty", "~> 0.20"
+gem "httparty", "~> 0.23"
+
+gem "concurrent-ruby", "1.3.4"
